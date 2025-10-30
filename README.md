@@ -1,3 +1,17 @@
+# Agent Lab notes
+
+
+```
+git clone https://github.com/nenuadrian/rl-baselines3-zoo.git
+cd rl-baselines3-zoo && pip install .
+uninstall stable-baselines3
+git clone https://github.com/nenuadrian/stable-baselines3.git && cd stable-baselines3 && pip install .
+cd ..
+```
+
+
+# Original
+
 <!-- [![pipeline status](https://gitlab.com/araffin/rl-baselines3-zoo/badges/master/pipeline.svg)](https://gitlab.com/araffin/rl-baselines3-zoo/-/commits/master) -->
 ![CI](https://github.com/DLR-RM/rl-baselines3-zoo/workflows/CI/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/rl-baselines3-zoo/badge/?version=master)](https://rl-baselines3-zoo.readthedocs.io/en/master/?badge=master)
