@@ -9,8 +9,16 @@ git clone https://github.com/nenuadrian/stable-baselines3.git && cd stable-basel
 cd ..
 ```
 
+## Custom features
 
-# Original
+```
+--run-extra-name <str> : extra name to add to wandb run name
+--advantage-multiplier <float> : multiplier to scale advantages in ppo
+--normalize-advantage-mean <bool> : normalize advantages by subtracting mean before scaling
+```
+
+
+### Original
 
 <!-- [![pipeline status](https://gitlab.com/araffin/rl-baselines3-zoo/badges/master/pipeline.svg)](https://gitlab.com/araffin/rl-baselines3-zoo/-/commits/master) -->
 ![CI](https://github.com/DLR-RM/rl-baselines3-zoo/workflows/CI/badge.svg)

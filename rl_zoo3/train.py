@@ -107,6 +107,7 @@ def train() -> None:
     parser.add_argument(
         "--storage", help="Database storage path if distributed optimization should be used", type=str, default=None
     )
+    parser.add_argument("--wandb-run-extra-name", help="Wandb", type=str, default=None)
     parser.add_argument("--study-name", help="Study name for distributed optimization", type=str, default=None)
     parser.add_argument("--trial-id", help="Trial id to load for a Optuna storage.", type=int)
     parser.add_argument("--verbose", help="Verbose mode (0: no output, 1: INFO)", default=1, type=int)
@@ -210,7 +211,7 @@ def train() -> None:
                 "if you want to use Weights & Biases to track experiment, please install W&B via `pip install wandb`"
             ) from e
 
-        run_name = f"{args.env}__{args.algo}__{args.seed}__{int(time.time())}"
+        run_name = f"{args.env}_{args.run_extra_name}___{args.algo}__{args.seed}__{int(time.time())}"
         tags = [*args.wandb_tags, f"v{sb3.__version__}"]
         run = wandb.init(
             name=run_name,
