@@ -214,7 +214,9 @@ def train() -> None:
 
         run_name = f"{args.env}_{args.wandb_run_extra_name}___{args.algo}__{args.seed}__{int(time.time())}"
         group_name = (
-            args.wandb_group_name if args.wandb_group_name is not None else f"{args.env}_{args.run_extra_name}___{args.algo}"
+            args.wandb_group_name
+            if args.wandb_group_name is not None
+            else f"{args.env}_{args.wandb_run_extra_name}___{args.algo}"
         )
         tags = [*args.wandb_tags, f"v{sb3.__version__}"]
         run = wandb.init(

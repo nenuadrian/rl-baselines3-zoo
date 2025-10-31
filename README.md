@@ -11,8 +11,10 @@ cd ..
 
 ## Custom features
 
+Group name automatically generated.
+
 ```
---run-extra-name <str> : extra name to add to wandb run name
+--wandb-run-extra-name <str> : extra name to add to wandb run name
 --advantage-multiplier <float> : multiplier to scale advantages in ppo
 --normalize-advantage-mean <bool> : normalize advantages by subtracting mean before scaling
 ```
