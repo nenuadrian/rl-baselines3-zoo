@@ -13,7 +13,7 @@ from gymnasium import spaces
 from huggingface_hub import HfApi
 from huggingface_sb3 import EnvironmentName, ModelName
 from sb3_contrib import ARS, QRDQN, TQC, TRPO, CrossQ, RecurrentPPO
-from stable_baselines3 import A2C, DDPG, DQN, PPO, SAC, TD3
+from stable_baselines3 import A2C, DDPG, DQN, PPO, SAC, TD3, VMPO
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.env_util import make_vec_env
@@ -36,6 +36,7 @@ ALGOS: dict[str, type[BaseAlgorithm]] = {
     "qrdqn": QRDQN,
     "tqc": TQC,
     "trpo": TRPO,
+    "vmpo": VMPO,
     "ppo_lstm": RecurrentPPO,
 }
 
