@@ -11,7 +11,7 @@ atari:
   learning_rate: lin_2.5e-4
   clip_range: lin_0.1
   vf_coef: 0.5
-  ent_coef: 0.01
+  ent_coef: 0.02
 
 # Tuned
 Pendulum-v1:
@@ -424,7 +424,6 @@ HalfCheetah-v4:
   learning_rate: 2.0633e-05
   ent_coef: 0.000401762
   clip_range: 0.1
-  n_epochs: 20
   gae_lambda: 0.92
   max_grad_norm: 0.8
   vf_coef: 0.58096
